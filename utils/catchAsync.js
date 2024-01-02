@@ -5,3 +5,7 @@ const catchAsync = (fn) => (req, res, next) => {
 }
 
 module.exports = catchAsync
+
+// req: The HTTP request object.
+// res: The HTTP response object.
+// next: A callback function to pass control to the next middleware.
