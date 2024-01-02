@@ -29,3 +29,36 @@ module.exports = (schema) => (req, res, next) => {
 // map: Returns a new array, does not modify the original array, ideal for transformations.
 // forEach: Executes a function for each element, does not return anything, ideal for side effects.
 // reduce: Reduces the array to a single value, highly flexible for various calculations and transformations.
+
+// closure example:
+// function createCounter() {
+//     let count = 0;
+//
+//     return {
+//         increment: function() {
+//             count++;
+//             console.log(count);
+//         },
+//         decrement: function() {
+//             count--;
+//             console.log(count);
+//         },
+//         getCount: function() {
+//             console.log('Current count is:', count);
+//             return count;
+//         }
+//     };
+// }
+//
+// let counter1 = createCounter();
+// let counter2 = createCounter();
+//
+// counter1.increment();  // Outputs: 1
+// counter1.increment();  // Outputs: 2
+// counter1.getCount();   // Outputs: "Current count is: 2"
+//
+// counter2.decrement();  // Outputs: -1
+// counter2.getCount();   // Outputs: "Current count is: -1"
+//
+// // counter1 and counter2 maintain separate states
+// counter1.getCount();   // Outputs: "Current count is: 2"
